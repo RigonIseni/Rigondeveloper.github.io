@@ -1,0 +1,132 @@
+
+  body, html {
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  .bg-image {
+    /* The image used */
+    background: url("./assets/img/giphy.gif") fixed 100%;
+  
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  
+    /* Full height */
+    height: 110vh;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  /* Position text in the middle of the page/image */
+  .bg-text {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .bg-text a {
+      text-decoration: none;
+      color: white;
+      border: 3px solid white;
+      background: none;
+      padding: 10px 20px;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      border-top-right-radius: 25px;
+      transition: all .3s;
+      text-align: center;
+  }
+  .bg-text a:hover {
+      background-color: white;
+      color: black;
+  }
+  .bg-text p {
+    margin-bottom: 50px;
+  }
+  .bg-text .port {
+    margin-right: 30px;
+  }
+  .bg-text img {
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+  @media screen and (max-width: 600px) {
+    .bg-text p {
+      margin-bottom: 30px;
+    }
+    .bg-text .port {
+      margin-right: 0px;
+    }
+    .bg-text{
+      top: 15%;
+    }  
+  }
+@media screen and (max-width: 400px) {
+  .bg-text img {
+    width: 100%;
+  }
+  .bg-image {
+    height: 120vh;
+  }
+  .bg-text{
+    top: 5%;
+  }  
+  .bg-text a {
+    font-size: 12px;
+}
+}
+@media screen and (min-width: 600px) {
+  .bg-text>br {
+    display: none;
+  }
+}
+@media screen and (max-width: 270px) {
+  .bg-image {
+    height: 120vh;
+  }
+}
+@media screen and (max-width: 220px) {
+  .bg-image {
+    height: 130vh;
+  }
+}
